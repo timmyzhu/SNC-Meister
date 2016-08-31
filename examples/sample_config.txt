@@ -1,0 +1,555 @@
+{
+	"addrPrefix" : "username",
+	"clients" : 
+	[
+		{
+			"SLO" : 0.040000000000000001,
+			"SLOpercentile" : 99,
+			"flows" : 
+			[
+				{
+					"arrivalInfo" : 
+					{
+						"MGFs" : 
+						[
+							{
+								"count" : 181833,
+								"lambda" : 0.00098116169544910773,
+								"p" : 0.0021548723255849687,
+								"totalSize" : 185324193.59967926,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 18720,
+								"lambda" : 0.00098116169544775595,
+								"p" : 0.0027820516611321206,
+								"totalSize" : 19079423.999993268,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 687,
+								"lambda" : 0.00098116169544741508,
+								"p" : 0.0034892309966792728,
+								"totalSize" : 700190.39999999618,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 889,
+								"lambda" : 0.00098116169544742397,
+								"p" : 0.0042764103322264248,
+								"totalSize" : 906068.79999998678,
+								"type" : "MGFExponential"
+							}
+						],
+						"transitionMatrix" : 
+						[
+							[
+								0.99999912408759128,
+								8.5158150851581508e-07,
+								0,
+								2.4330900243309002e-08
+							],
+							[ 9.4594607377649639e-06, 0.99999054053926228, 0, 0 ],
+							[ 1.0000050000250001e-05, 0, 0.99998999994999971, 0 ],
+							[ 0, 0, 1.0000050000250001e-05, 0.99998999994999971 ]
+						]
+					},
+					"dstAddr" : "username-serverHostname1vm1",
+					"enforcerAddr" : "clientHostname1",
+					"name" : "F0In",
+					"queues" : [ "clientHostname1-out", "serverHostname1-in" ],
+					"srcAddr" : "username-clientHostname1vm1"
+				},
+				{
+					"arrivalInfo" : 
+					{
+						"MGFs" : 
+						[
+							{
+								"count" : 181833,
+								"lambda" : 2.7590164658013148e-05,
+								"p" : 0.0021548723255849687,
+								"totalSize" : 6590500718.4213867,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 18720,
+								"lambda" : 2.759016465810519e-05,
+								"p" : 0.0027820516611321206,
+								"totalSize" : 678502655.99993825,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 687,
+								"lambda" : 2.759016465810234e-05,
+								"p" : 0.0034892309966792728,
+								"totalSize" : 24900177.600000307,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 889,
+								"lambda" : 2.7590164658102289e-05,
+								"p" : 0.0042764103322264248,
+								"totalSize" : 32221627.200000457,
+								"type" : "MGFExponential"
+							}
+						],
+						"transitionMatrix" : 
+						[
+							[
+								0.99999912408759128,
+								8.5158150851581508e-07,
+								0,
+								2.4330900243309002e-08
+							],
+							[ 9.4594607377649639e-06, 0.99999054053926228, 0, 0 ],
+							[ 1.0000050000250001e-05, 0, 0.99998999994999971, 0 ],
+							[ 0, 0, 1.0000050000250001e-05, 0.99998999994999971 ]
+						]
+					},
+					"dstAddr" : "username-clientHostname1vm1",
+					"enforcerAddr" : "serverHostname1",
+					"name" : "F0Out",
+					"queues" : [ "serverHostname1-out", "clientHostname1-in" ],
+					"srcAddr" : "username-serverHostname1vm1"
+				}
+			],
+			"name" : "C0",
+			"trace" : "sample_trace1.txt"
+		},
+		{
+			"SLO" : 0.029999999999999999,
+			"SLOpercentile" : 99.900000000000006,
+			"flows" : 
+			[
+				{
+					"arrivalInfo" : 
+					{
+						"MGFs" : 
+						[
+							{
+								"count" : 191247,
+								"lambda" : 0.00098116169544958912,
+								"p" : 0.0022023538465021824,
+								"totalSize" : 194918942.39956704,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 9347,
+								"lambda" : 0.00098116169544738407,
+								"p" : 0.002835967033215845,
+								"totalSize" : 9526462.40000025,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 0,
+								"lambda" : 1000000,
+								"p" : 0.0035495802199295074,
+								"totalSize" : 0,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 1760,
+								"lambda" : 0.00098116169544743915,
+								"p" : 0.0043431934066431692,
+								"totalSize" : 1793791.9999999462,
+								"type" : "MGFExponential"
+							}
+						],
+						"transitionMatrix" : 
+						[
+							[
+								0.99999955813953489,
+								4.1860465116279072e-07,
+								0,
+								2.3255813953488372e-08
+							],
+							[
+								9.7222249228402569e-06,
+								0.99998999999722227,
+								0,
+								2.7777785493829306e-07
+							],
+							[ 0, 0, 1, 0 ],
+							[ 7.5000187500468755e-06, 0, 0, 0.99999249998124995 ]
+						]
+					},
+					"dstAddr" : "username-serverHostname1vm2",
+					"enforcerAddr" : "clientHostname1",
+					"name" : "F1In",
+					"queues" : [ "clientHostname1-out", "serverHostname1-in" ],
+					"srcAddr" : "username-clientHostname1vm2"
+				},
+				{
+					"arrivalInfo" : 
+					{
+						"MGFs" : 
+						[
+							{
+								"count" : 191247,
+								"lambda" : 2.7590164658010407e-05,
+								"p" : 0.0022023538465021824,
+								"totalSize" : 6931709265.6231823,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 9347,
+								"lambda" : 2.7590164658097837e-05,
+								"p" : 0.002835967033215845,
+								"totalSize" : 338780145.60005945,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 0,
+								"lambda" : 1000000,
+								"p" : 0.0035495802199295074,
+								"totalSize" : 0,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 1760,
+								"lambda" : 2.7590164658103546e-05,
+								"p" : 0.0043431934066431692,
+								"totalSize" : 63790847.999997996,
+								"type" : "MGFExponential"
+							}
+						],
+						"transitionMatrix" : 
+						[
+							[
+								0.99999955813953489,
+								4.1860465116279072e-07,
+								0,
+								2.3255813953488372e-08
+							],
+							[
+								9.7222249228402569e-06,
+								0.99998999999722227,
+								0,
+								2.7777785493829306e-07
+							],
+							[ 0, 0, 1, 0 ],
+							[ 7.5000187500468755e-06, 0, 0, 0.99999249998124995 ]
+						]
+					},
+					"dstAddr" : "username-clientHostname1vm2",
+					"enforcerAddr" : "serverHostname1",
+					"name" : "F1Out",
+					"queues" : [ "serverHostname1-out", "clientHostname1-in" ],
+					"srcAddr" : "username-serverHostname1vm2"
+				}
+			],
+			"name" : "C1",
+			"trace" : "sample_trace2.txt"
+		},
+		{
+			"SLO" : 0.02,
+			"SLOpercentile" : 99.900000000000006,
+			"flows" : 
+			[
+				{
+					"arrivalInfo" : 
+					{
+						"MGFs" : 
+						[
+							{
+								"count" : 148523,
+								"lambda" : 0.00098116169544691482,
+								"p" : 0.0020604180894312333,
+								"totalSize" : 151374641.60007635,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 52081,
+								"lambda" : 0.00098116169544667435,
+								"p" : 0.0026745843495937383,
+								"totalSize" : 53080955.200039782,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 1693,
+								"lambda" : 0.00098116169544743849,
+								"p" : 0.0033687506097562427,
+								"totalSize" : 1725505.5999999493,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 840,
+								"lambda" : 0.00098116169544742223,
+								"p" : 0.0041429168699187481,
+								"totalSize" : 856127.99999998906,
+								"type" : "MGFExponential"
+							}
+						],
+						"transitionMatrix" : 
+						[
+							[
+								0.99999766176470584,
+								2.2941176470588234e-06,
+								2.9411764705882354e-08,
+								1.4705882352941177e-08
+							],
+							[
+								7.3239436619718307e-06,
+								0.99999253521126763,
+								9.3896713615023478e-08,
+								4.6948356807511739e-08
+							],
+							[
+								6.0000120000240003e-06,
+								2.0000040000079998e-06,
+								0.99999199998400001,
+								0
+							],
+							[
+								5.0000250001250005e-06,
+								5.0000250001250005e-06,
+								0,
+								0.99998999994999971
+							]
+						]
+					},
+					"dstAddr" : "username-serverHostname2vm1",
+					"enforcerAddr" : "clientHostname1",
+					"name" : "F2In",
+					"queues" : [ "clientHostname1-out", "serverHostname2-in" ],
+					"srcAddr" : "username-clientHostname1vm3"
+				},
+				{
+					"arrivalInfo" : 
+					{
+						"MGFs" : 
+						[
+							{
+								"count" : 148523,
+								"lambda" : 2.759016465802563e-05,
+								"p" : 0.0020604180894312333,
+								"totalSize" : 5383186430.4150333,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 52081,
+								"lambda" : 2.7590164658126833e-05,
+								"p" : 0.0026745843495937383,
+								"totalSize" : 1887665428.7983475,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 1693,
+								"lambda" : 2.7590164658103492e-05,
+								"p" : 0.0033687506097562427,
+								"totalSize" : 61362446.399998195,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 840,
+								"lambda" : 2.75901646581023e-05,
+								"p" : 0.0041429168699187481,
+								"totalSize" : 30445632.000000421,
+								"type" : "MGFExponential"
+							}
+						],
+						"transitionMatrix" : 
+						[
+							[
+								0.99999766176470584,
+								2.2941176470588234e-06,
+								2.9411764705882354e-08,
+								1.4705882352941177e-08
+							],
+							[
+								7.3239436619718307e-06,
+								0.99999253521126763,
+								9.3896713615023478e-08,
+								4.6948356807511739e-08
+							],
+							[
+								6.0000120000240003e-06,
+								2.0000040000079998e-06,
+								0.99999199998400001,
+								0
+							],
+							[
+								5.0000250001250005e-06,
+								5.0000250001250005e-06,
+								0,
+								0.99998999994999971
+							]
+						]
+					},
+					"dstAddr" : "username-clientHostname1vm3",
+					"enforcerAddr" : "serverHostname2",
+					"name" : "F2Out",
+					"queues" : [ "serverHostname2-out", "clientHostname1-in" ],
+					"srcAddr" : "username-serverHostname2vm1"
+				}
+			],
+			"name" : "C2",
+			"trace" : "sample_trace3.txt"
+		},
+		{
+			"SLO" : 0.01,
+			"SLOpercentile" : 99.900000000000006,
+			"flows" : 
+			[
+				{
+					"arrivalInfo" : 
+					{
+						"MGFs" : 
+						[
+							{
+								"count" : 151974,
+								"lambda" : 0.00098116169544718674,
+								"p" : 0.0020806000600120029,
+								"totalSize" : 154891900.80003521,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 49236,
+								"lambda" : 0.00098116169544679773,
+								"p" : 0.0026975714714371447,
+								"totalSize" : 50181331.200031303,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 322,
+								"lambda" : 0.0009811616954474038,
+								"p" : 0.0033945428828622871,
+								"totalSize" : 328182.400000002,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 1279,
+								"lambda" : 0.00098116169544743329,
+								"p" : 0.0041715142942874289,
+								"totalSize" : 1303556.7999999686,
+								"type" : "MGFExponential"
+							}
+						],
+						"transitionMatrix" : 
+						[
+							[
+								0.99999778735632183,
+								2.1839080459770117e-06,
+								1.4367816091954023e-08,
+								1.4367816091954023e-08
+							],
+							[
+								7.6000000000000001e-06,
+								0.99999229999999995,
+								0,
+								9.9999999999999995e-08
+							],
+							[ 0, 1.000010000100001e-05, 0.99998999989999904, 0 ],
+							[
+								6.6666666666666666e-06,
+								3.3333333333333333e-06,
+								0,
+								0.99999000000000005
+							]
+						]
+					},
+					"dstAddr" : "username-serverHostname2vm2",
+					"enforcerAddr" : "clientHostname1",
+					"name" : "F3In",
+					"queues" : [ "clientHostname1-out", "serverHostname2-in" ],
+					"srcAddr" : "username-clientHostname1vm4"
+				},
+				{
+					"arrivalInfo" : 
+					{
+						"MGFs" : 
+						[
+							{
+								"count" : 151974,
+								"lambda" : 2.7590164658024081e-05,
+								"p" : 0.0020806000600120029,
+								"totalSize" : 5508267235.2156916,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 49236,
+								"lambda" : 2.7590164658126132e-05,
+								"p" : 0.0026975714714371447,
+								"totalSize" : 1784548972.7984831,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 322,
+								"lambda" : 2.7590164658102591e-05,
+								"p" : 0.0033945428828622871,
+								"totalSize" : 11670825.600000037,
+								"type" : "MGFExponential"
+							},
+							{
+								"count" : 1279,
+								"lambda" : 2.7590164658103018e-05,
+								"p" : 0.0041715142942874289,
+								"totalSize" : 46357099.199999429,
+								"type" : "MGFExponential"
+							}
+						],
+						"transitionMatrix" : 
+						[
+							[
+								0.99999778735632183,
+								2.1839080459770117e-06,
+								1.4367816091954023e-08,
+								1.4367816091954023e-08
+							],
+							[
+								7.6000000000000001e-06,
+								0.99999229999999995,
+								0,
+								9.9999999999999995e-08
+							],
+							[ 0, 1.000010000100001e-05, 0.99998999989999904, 0 ],
+							[
+								6.6666666666666666e-06,
+								3.3333333333333333e-06,
+								0,
+								0.99999000000000005
+							]
+						]
+					},
+					"dstAddr" : "username-clientHostname1vm4",
+					"enforcerAddr" : "serverHostname2",
+					"name" : "F3Out",
+					"queues" : [ "serverHostname2-out", "clientHostname1-in" ],
+					"srcAddr" : "username-serverHostname2vm2"
+				}
+			],
+			"name" : "C3",
+			"trace" : "sample_trace4.txt"
+		}
+	],
+	"debug" : 1,
+	"outputConfig" : "sample_output.txt",
+	"queues" : 
+	[
+		{
+			"bandwidth" : 125000000,
+			"name" : "clientHostname1-in"
+		},
+		{
+			"bandwidth" : 125000000,
+			"name" : "clientHostname1-out"
+		},
+		{
+			"bandwidth" : 125000000,
+			"name" : "serverHostname1-in"
+		},
+		{
+			"bandwidth" : 125000000,
+			"name" : "serverHostname1-out"
+		},
+		{
+			"bandwidth" : 125000000,
+			"name" : "serverHostname2-in"
+		},
+		{
+			"bandwidth" : 125000000,
+			"name" : "serverHostname2-out"
+		}
+	]
+}

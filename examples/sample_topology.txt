@@ -1,0 +1,43 @@
+{
+    "debug": 1,
+    "addrPrefix": "username",
+    "outputConfig": "sample_output.txt",
+    "clients": [
+        {
+            "SLO": 0.04,
+            "SLOpercentile": 99,
+            "trace": "sample_trace1.txt",
+            "clientHost": "clientHostname1",
+            "clientVM": "1",
+            "serverHost": "serverHostname1",
+            "serverVM": "1"
+        },
+        {
+            "SLO": 0.03,
+            "SLOpercentile": 99.9,
+            "trace": "sample_trace2.txt",
+            "clientHost": "clientHostname1",
+            "clientVM": "2",
+            "serverHost": "serverHostname1",
+            "serverVM": "2"
+        },
+        {
+            "SLO": 0.02,
+            "SLOpercentile": 99.9,
+            "trace": "sample_trace3.txt",
+            "clientHost": "clientHostname1",
+            "clientVM": "3",
+            "serverHost": "serverHostname2",
+            "serverVM": "1"
+        },
+        {
+            "SLO": 0.01,
+            "SLOpercentile": 99.9,
+            "trace": "sample_trace4.txt",
+            "clientHost": "clientHostname1",
+            "clientVM": "4",
+            "serverHost": "serverHostname2",
+            "serverVM": "2"
+        }
+    ]
+}

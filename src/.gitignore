@@ -1,0 +1,8 @@
+*
+!*/
+!*.*
+!Makefile
+*.o
+*~
+prot/*.h
+*/*_prot_*.c
