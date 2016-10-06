@@ -41,13 +41,15 @@ void priorityAlgoBySLOTest()
     Json::Value& flowInfo = clientInfo["flows"][0];
     flowInfo["queues"] = queueList;
 
+    configurePrioritiesBySLO(&testNC);
+
     flowInfo["name"] = Json::Value("F0");
     clientInfo["name"] = Json::Value("C0");
     clientInfo["SLO"] = Json::Value(1);
     testNC.addClient(clientInfo);
 
     configurePrioritiesBySLO(&testNC);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F0"))->priority == 1);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F0"))->priority == 0);
 
     flowInfo["name"] = Json::Value("F1");
     clientInfo["name"] = Json::Value("C1");
@@ -55,8 +57,8 @@ void priorityAlgoBySLOTest()
     testNC.addClient(clientInfo);
 
     configurePrioritiesBySLO(&testNC);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F0"))->priority == 2);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F1"))->priority == 1);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F0"))->priority == 1);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F1"))->priority == 0);
 
     flowInfo["name"] = Json::Value("F2");
     clientInfo["name"] = Json::Value("C2");
@@ -64,9 +66,9 @@ void priorityAlgoBySLOTest()
     testNC.addClient(clientInfo);
 
     configurePrioritiesBySLO(&testNC);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F0"))->priority == 2);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F1"))->priority == 1);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F2"))->priority == 3);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F0"))->priority == 1);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F1"))->priority == 0);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F2"))->priority == 2);
 
     flowInfo["name"] = Json::Value("F3");
     clientInfo["name"] = Json::Value("C3");
@@ -74,10 +76,10 @@ void priorityAlgoBySLOTest()
     testNC.addClient(clientInfo);
 
     configurePrioritiesBySLO(&testNC);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F0"))->priority == 2);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F1"))->priority == 1);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F2"))->priority == 3);
-    assert(testNC.getFlow(testNC.getFlowIdByName("F3"))->priority == 2);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F0"))->priority == 1);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F1"))->priority == 0);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F2"))->priority == 2);
+    assert(testNC.getFlow(testNC.getFlowIdByName("F3"))->priority == 1);
 
     cout << "PASS priorityAlgoBySLOTest" << endl;
 }

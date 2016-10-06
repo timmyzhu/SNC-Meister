@@ -29,7 +29,7 @@ void configurePrioritiesBySLO(NC* nc)
 
     // Assign priorities by SLO
     unsigned int priority = 0;
-    double currentSLO = 0;
+    double currentSLO = clientList.empty() ? 0 : clientList.front()->SLO;
     for (unsigned int index = 0; index < clientList.size(); index++) {
         const Client* c = clientList[index];
         if (c->SLO > currentSLO) {
