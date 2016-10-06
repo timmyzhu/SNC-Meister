@@ -44,7 +44,7 @@ public:
     void setProbRequest(double probRequest);
 
     // Create a new MGF based on serialized JSON object.
-    static MGF* create(Json::Value json);
+    static MGF* create(const Json::Value& json);
     virtual void serialize(Json::Value& json) const
     {
         serializeJSON(json, "p", _p);
@@ -76,7 +76,7 @@ public:
     virtual void addSampleRequest(const ProcessedTraceEntry& traceEntry);
 
     // Create a new MGF based on serialized JSON object.
-    static MGFDeterministic* create(Json::Value json)
+    static MGFDeterministic* create(const Json::Value& json)
     {
         MGFDeterministic* mgf = new MGFDeterministic();
         mgf->deserialize(json);
@@ -120,7 +120,7 @@ public:
     virtual void addSampleRequest(const ProcessedTraceEntry& traceEntry);
 
     // Create a new MGF based on serialized JSON object.
-    static MGFExponential* create(Json::Value json)
+    static MGFExponential* create(const Json::Value& json)
     {
         MGFExponential* mgf = new MGFExponential();
         mgf->deserialize(json);
@@ -167,7 +167,7 @@ public:
     virtual void addSampleRequest(const ProcessedTraceEntry& traceEntry);
 
     // Create a new MGF based on serialized JSON object.
-    static MGFHyperexponential* create(Json::Value json)
+    static MGFHyperexponential* create(const Json::Value& json)
     {
         MGFHyperexponential* mgf = new MGFHyperexponential();
         mgf->deserialize(json);
@@ -214,7 +214,7 @@ public:
     virtual void addSampleRequest(const ProcessedTraceEntry& traceEntry);
 
     // Create a new MGF based on serialized JSON object.
-    static MGFHyperexponentialGetPut* create(Json::Value json)
+    static MGFHyperexponentialGetPut* create(const Json::Value& json)
     {
         MGFHyperexponentialGetPut* mgf = new MGFHyperexponentialGetPut();
         mgf->deserialize(json);
@@ -256,7 +256,7 @@ public:
     virtual void addSampleRequest(const ProcessedTraceEntry& traceEntry);
 
     // Create a new MGF based on serialized JSON object.
-    static MGFTrace* create(Json::Value json)
+    static MGFTrace* create(const Json::Value& json)
     {
         MGFTrace* mgf = new MGFTrace();
         mgf->deserialize(json);

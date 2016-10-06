@@ -18,7 +18,7 @@ void MGF::setProbRequest(double probRequest)
     _p = probRequest;
 }
 
-MGF* MGF::create(Json::Value json)
+MGF* MGF::create(const Json::Value& json)
 {
     MGF* mgf = NULL;
     if (json.isMember("type")) {

@@ -1,4 +1,4 @@
-// priorityAlgoBySLO.hpp - Code for configuring priorities in order of SLO.
+// priorityAlgoBySLO.cpp - Code for configuring priorities in order of SLO.
 //
 // Copyright (c) 2016 Timothy Zhu.
 // Licensed under the MIT License. See LICENSE file for details.

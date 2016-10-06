@@ -8,6 +8,7 @@
 #define _SERIALIZE_JSON_HPP
 
 #include <string>
+#include <iostream>
 #include "../json/json.h"
 
 using namespace std;

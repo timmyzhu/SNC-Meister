@@ -260,7 +260,7 @@ public:
     }
     // Create a new MMBPArrival based on serialized JSON object.
     // Dependencies are not serialized since FlowIds are local to an instance.
-    MMBPArrival(Json::Value json)
+    MMBPArrival(const Json::Value& json)
     {
         deserialize(json);
     }
@@ -277,7 +277,7 @@ public:
 
     // Create a new MMBPArrival based on serialized JSON object.
     // Dependencies are not serialized since FlowIds are local to an instance.
-    static MMBPArrival* create(Json::Value json)
+    static MMBPArrival* create(const Json::Value& json)
     {
         return new MMBPArrival(json);
     }

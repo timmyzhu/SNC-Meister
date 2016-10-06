@@ -4,12 +4,11 @@
 // Licensed under the MIT License. See LICENSE file for details.
 //
 
-#ifndef _TEST_HPP
-#define _TEST_HPP
+#ifndef _SNC_LIBRARY_TEST_HPP
+#define _SNC_LIBRARY_TEST_HPP
 
 #include <cmath>
 #include "../json/json.h"
-#include "../SNC-Library/ProcessedTrace.hpp"
 
 using namespace std;
 
@@ -30,4 +29,4 @@ void priorityAlgoBySLOTest();
 void NCTest();
 void SNCTest();
 
-#endif // _TEST_HPP
+#endif // _SNC_LIBRARY_TEST_HPP
